@@ -7,4 +7,5 @@ def fizzbuzz():
             print("fizz", end=" ")
         elif (n % 5) == 0:
             print("buzz", end=" ")
-        else: print(n, end=" ")
+        else:
+            print(n, end=" ")
