@@ -1,2 +1,2 @@
-#!/bin/sh
-echo "#pythoniscool"
+#!/usr/bin/python3
+raise SystemExit("#pythoniscool")
