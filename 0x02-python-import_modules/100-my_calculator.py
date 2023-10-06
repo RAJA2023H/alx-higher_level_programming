@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import sys
     argc = len(sys.argv) - 1
     if argc != 3:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>", end="")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
     a = int(sys.argv[1])
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     operator = sys.argv[2]
 
     if operator not in ['+', '-', '*', '/']:
-        print("Invalid operator. Use '+', '-', '*', or '/'")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
     if operator == '+':
