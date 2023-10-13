@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def number_keys(a_dictionary):
-
+def update_dictionary(a_dictionary, key, value):
+    a_dictionary[key] = value
+    return a_dictionary
