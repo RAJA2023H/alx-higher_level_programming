@@ -1,26 +1,41 @@
 #include "lists.h"
+
+/**
+ * is_palindrome - check if is palindrom
+ * @head: pointer to pointer of first node of listint_t list
+ * Return: 1 or 0
+ */
+
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head, *palin = *head;
-	int counter = 0, i = 0, j = 0;
+	listint_t *slow = *head, *fast = *head,
+	*prev = NULL, *curr, *next, *first, *second;
 
-	if (!*head)
+	if (*head == NULL)
 		return (1);
-
-	while (current)
+	while (fast != NULL && fast->next != NULL)
 	{
-		current = current->next;
-		counter++;
+		slow = slow->next;
+		fast = fast->next->next;
 	}
-	current = *head;
-	for (i = 1; i <= counter; i++)
+
+	curr = slow;
+	while (curr != NULL)
 	{
-		for (j = i; j <= counter - i; j++)
-			palin = palin->next;
-		if (current->n != palin->n)
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+
+	first = *head;
+	second = prev;
+	while (first != NULL && second != NULL)
+	{
+		if (first->n != second->n)
 			return (0);
-		current = current->next;
-		palin = current;
+		first = first->next;
+		second = second->next;
 	}
 	return (1);
 }
