@@ -7,31 +7,61 @@
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *current = *head, *palindrome = *head;
-    int length = 0, i = 0, j = 0;
+    listint_t *slow = *head;
+    listint_t *fast = *head;
+    listint_t *prev = NULL;
+    listint_t *mid = NULL;
+    int is_palindrome = 1;
 
-    if (!*head)
+    if (!head || !*head || !((*head)->next))
         return (1);
 
-    // Calculate the length of the linked list
-    while (current)
+    // Find the middle of the linked list
+    while (fast && fast->next)
     {
-        current = current->next;
-        length++;
+        fast = fast->next->next;
+        prev = slow;
+        slow = slow->next;
     }
 
-    current = *head;
-    for (i = 1; i <= length; i++)
+    if (fast)
     {
-        for (j = i; j <= length - i; j++)
-            palindrome = palindrome->next;
-
-        if (current->n != palindrome->n)
-            return (0);
-
-        current = current->next;
-        palindrome = current;
+        // List has an odd number of elements, so skip the middle one
+        mid = slow;
+        slow = slow->next;
     }
 
-    return (1);
+    // Reverse the second half of the linked list
+    listint_t *second_half = NULL;
+    while (slow)
+    {
+        listint_t *next = slow->next;
+        slow->next = second_half;
+        second_half = slow;
+        slow = next;
+    }
+
+    // Compare the first half and reversed second half
+    listint_t *first_half = *head;
+    while (second_half)
+    {
+        if (first_half->n != second_half->n)
+        {
+            is_palindrome = 0;
+            break;
+        }
+        first_half = first_half->next;
+        second_half = second_half->next;
+    }
+
+    // Restore the original linked list
+    while (prev)
+    {
+        listint_t *next = prev->next;
+        prev->next = mid;
+        mid = prev;
+        prev = next;
+    }
+
+    return is_palindrome;
 }
