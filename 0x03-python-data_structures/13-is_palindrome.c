@@ -5,37 +5,27 @@
  * @head: pointer to pointer of first node of listint_t list
  * Return: 1 or 0
  */
-
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head,
-	*prev = NULL, *curr, *next, *first, *second;
+	listint_t *prem = *head, *deux = *head,
+		  *prev = NULL, *current, *next, *first, *second;
 
 	if (*head == NULL)
 		return (1);
-	while (fast != NULL && fast->next != NULL)
-	{
-		slow = slow->next;
-		fast = fast->next->next;
-	}
-
-	curr = slow;
-	while (curr != NULL)
-	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
-	}
+	for (; deux != NULL && deux->next != NULL;
+			prem = prem->next, deux = deux->next->next);
+	current = prem;
+	for (; current != NULL;
+			next = current->next, current->next = prev, prev = current, current = next);
 
 	first = *head;
 	second = prev;
-	while (first != NULL && second != NULL)
+
+	for (; first != NULL && second != NULL;
+			first = first->next, second = second->next)
 	{
 		if (first->n != second->n)
 			return (0);
-		first = first->next;
-		second = second->next;
 	}
 	return (1);
 }
