@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stddef.h>
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
 
 struct _object {
 	PyObject_VAR_HEAD
