@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""Define a class."""
+"""
+Define a class.
+"""
 
 
     class Square():
-
-        """class named square."""
+        """
+        class named square.
+        """
         pass
