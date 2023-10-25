@@ -3,5 +3,6 @@
 
 
     class Square():
+
         """class named square."""
         pass
