@@ -2,7 +2,10 @@
 """
 Define a class.
 """
+
+
 class Square():
+
     """
     class named square
     """
