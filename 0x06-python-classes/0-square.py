@@ -2,4 +2,4 @@
 """ Define a class """
 class Square:
     pass
-"""a class named square"""
+# class named square
