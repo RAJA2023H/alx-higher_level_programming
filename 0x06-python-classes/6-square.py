@@ -6,7 +6,7 @@ define a class of Square with a private attribute
 
 class Square:
     """
-    initializing a private attribute for instance of Square
+    initialze a private attribute for instance of Square
     """
     def __init__(self, __size=0, position=(0, 0)):
         """
@@ -18,7 +18,6 @@ class Square:
     @property
     def size(self):
         """
-        getter method
         return size value
         """
         return self.__size
@@ -26,7 +25,6 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        setter method
         set new value of size
         """
         self.__size = value
@@ -38,7 +36,6 @@ class Square:
     @property
     def position(self):
         """
-        getter method
         return size value
         """
         return self.__position
@@ -46,7 +43,6 @@ class Square:
     @position.setter
     def position(self, value):
         """
-        setter method
         set new value of position
         """
         self.__position = value
