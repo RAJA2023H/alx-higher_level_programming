@@ -1,51 +1,49 @@
 #!/usr/bin/python3
-"""
-define a class of Square with a private attribute
-"""
+"""defines a class Square"""
 
 
 class Square:
     """
     initializing a private attribute for instance of Square
     """
-    def __init__(self, __size=0):
+    def __init__(self, size=0):
         """
         initialize size value
         """
-        self.__size = __size
+        self.size = size
+
+    def area(self):
+        """
+        returns the current square area
+        """
+        return (self.__size) ** 2
 
     @property
     def size(self):
         """
-        return size value
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        set new value of size
+        set new value of position
         """
-        self.__size = value
-        if type(self.__size) is not int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
-            raise ValueError("size must be >= 0")
-
-    def area(self):
-        """
-        returns the current square area
-        """
-        return self.__size*self.__size
+        else:
+            if value < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = value
 
     def my_print(self):
         """
         prints in stdout the square
         """
-        if self.__size <= 0:
+        if self.__size == 0:
             print()
+            return
         else:
             for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end='')
-                print()
+                print("".join(["#" for j in range(self.__size)]))
