@@ -18,23 +18,36 @@ case: subtracting float and int
 
 case: integer number and string
 	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	          ...
 	TypeError: b must be an integer
 
 case: None
 	>>> add_integer(None)
+	Traceback (most recent call last):
+	      ...
 	TypeError: a must be an integer
 
 case: Adding a tuple
 	>>> add_integer((1, 1))
+	Traceback (most recent call last):
+	      ...
 	TypeError: a must be an integer
 
 case: letter and number
 	>>> add_integer('1', 1)
+	Traceback (most recent call last):
+    	      ...
 	TypeError: a must be an integer
 
 case: two letters
 	>>> add_integer('2', '1')
+	Traceback (most recent call last):
+              ...
 	TypeError: a must be an integer
+
 case: number and list
 	>>> add_integer(123, [])
+	Traceback (most recent call last):
+	      ...
 	TypeError: b must be an integer
