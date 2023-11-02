@@ -51,3 +51,7 @@ case: number and list
 	Traceback (most recent call last):
 	      ...
 	TypeError: b must be an integer
+
+case: Adding two float numbers
+	>>> add_integer(2.9, 2.9)
+    	4
