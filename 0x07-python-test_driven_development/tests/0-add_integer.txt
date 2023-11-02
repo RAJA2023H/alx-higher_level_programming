@@ -23,7 +23,7 @@ case: integer number and string
 	TypeError: b must be an integer
 
 case: None
-	>>> add_integer(None)
+	>>> add_integer()
 	Traceback (most recent call last):
 	      ...
 	TypeError: a must be an integer
