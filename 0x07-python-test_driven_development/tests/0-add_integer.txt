@@ -1,4 +1,10 @@
->>> add_integer = __import__('0-add_integer').add_integer
+Import function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Check function's docstring:
+	>>> doc = __import__("0-add_integer").add_integer.__doc__
+	>>> len(doc) > 1
+	True
 
 case: two integers
 	>>> add_integer(1, 2)
@@ -7,6 +13,10 @@ case: two integers
 case: subtracting two integers
 	>>> add_integer(100, -2)
 	98
+
+case: one argument
+	>>> add_integer(-85)
+	13
 
 case: adding float and int 
 	>>> add_integer(2.1, 98)
@@ -22,11 +32,11 @@ case: integer number and string
 	          ...
 	TypeError: b must be an integer
 
-case: None
+case: No arg
 	>>> add_integer()
 	Traceback (most recent call last):
 	      ...
-	TypeError: a must be an integer
+	TypeError: add_integer() missing 1 required positional argument: 'a'
 
 case: Adding a tuple
 	>>> add_integer((1, 1))
@@ -55,3 +65,9 @@ case: number and list
 case: Adding two float numbers
 	>>> add_integer(2.9, 2.9)
     	4
+
+Case Overflow:
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
