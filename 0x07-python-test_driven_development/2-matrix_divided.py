@@ -30,9 +30,6 @@ def matrix_divided(matrix, div):
 
     if len(matrix) == 0:
         return matrix
-    if not all(isinstance(col, (int, float)) for row in matrix for col in row):
-        raise TypeError("matrix must be a matri "
-                        "(list of lists) of integers/floats")
     ref_len = len(matrix[0])
     for row in matrix:
         if not isinstance(row, list):
@@ -51,4 +48,3 @@ def matrix_divided(matrix, div):
         divlist.append(divrow)
 
     return divlist
-
