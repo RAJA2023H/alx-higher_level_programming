@@ -34,8 +34,8 @@ Traceback (most recent call last):
 ...
 TypeError: div must be a number
 
-case: [[3]] / 3
->>> matrix = [[3]] 
+case: [] / 3
+>>> matrix = [] 
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
 ...
