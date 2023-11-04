@@ -30,6 +30,9 @@ def matrix_divided(matrix, div):
 
     if len(matrix) == 0:
         return matrix
+    if len(matrix) < 2:
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
 
     ref_len = len(matrix[0])
     for row in matrix:
