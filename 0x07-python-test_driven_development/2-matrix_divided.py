@@ -1,15 +1,21 @@
 #!/usr/bin/python3
 """
+Module composed by a function that divides the numbers of a matrix 
 
 """
 def matrix_divided(matrix, div):
     """
     function that divides all elements of a matrix.
+    
     Args:
         matrix: list of lists of integers or floats
         div: a number
+    
     Returns a new matrix
+    
+    
     """
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
