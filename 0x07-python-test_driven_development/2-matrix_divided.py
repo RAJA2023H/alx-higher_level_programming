@@ -37,7 +37,7 @@ def matrix_divided(matrix, div):
         divrow = []
         for i in row:
             if not isinstance(i, (int, float)):
-                raise TypeError(Each row of the matrix must have the same size)
+                raise TypeError("Each row of the matrix must have the same size")
             x = i / div
             divrow.append(round(x, 2))
         divlist.append(divrow)
