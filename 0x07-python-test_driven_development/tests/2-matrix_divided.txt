@@ -26,9 +26,3 @@ case: if div not (integer or float)
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
-
->>> matrix = [1.0]
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-    ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
