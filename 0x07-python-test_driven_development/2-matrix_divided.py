@@ -28,11 +28,10 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     divlist = []
 
-    if len(matrix) < 2:
-        raise TypeError("matrix must be a matrix (list of lists) "
-                        "of integers/floats")
-    ref_len = len(matrix[0])
+    if len(matrix) == 0:
+        return matrix
 
+    ref_len = len(matrix[0])
     for row in matrix:
         if len(row) != ref_len:
             raise TypeError("Each row of the matrix must have the "
