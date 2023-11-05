@@ -5,8 +5,12 @@ case : last name is not given
 >>> say_my_name("Bob")
 My name is Bob
 
+case :
+>>> say_my_name("the", "red")
+My name is the red
+
 case : first name is int
->>> say_my_name(12, "White")
+>>> say_my_name(12, "red")
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
