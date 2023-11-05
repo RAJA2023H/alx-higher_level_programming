@@ -3,7 +3,7 @@ import the module:
 
 case : last name is not given
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 
 case :
 >>> say_my_name("the", "red")
