@@ -1,0 +1,22 @@
+import the module
+>>>say_my_name = __import__('3-say_my_name').say_my_name
+
+case : <first name> <last name> are strings
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+case : last name is not given
+>>> say_my_name("Bob")
+My name is Bob
+
+case : first name is int
+>>> say_my_name(12, "White")
+first_name must be a string
+
+case : no name given
+>>> say_my_name()
+first_name must be a string
+
+case : last name is int 
+>>> say_my_name("rajae", 26)
+last_name must be a string
