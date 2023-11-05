@@ -1,7 +1,7 @@
 import the module
 >>>say_my_name = __import__('3-say_my_name').say_my_name
 
-case : <first name> <last name> are strings
+case : two strings
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
