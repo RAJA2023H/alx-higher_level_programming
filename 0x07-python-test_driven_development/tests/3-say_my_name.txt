@@ -1,5 +1,5 @@
-import the module
->>>say_my_name = __import__('3-say_my_name').say_my_name
+import the module:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 case : last name is not given
 >>> say_my_name("Bob")
