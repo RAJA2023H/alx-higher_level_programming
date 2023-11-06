@@ -12,6 +12,7 @@ case:
 case: empty list
 >>> print(MyList([]))
 []
+
 case:
 >>> MyList("hello").print_sorted()
 ['e', 'h', 'l', 'l', 'o']
