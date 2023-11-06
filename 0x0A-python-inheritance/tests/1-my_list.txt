@@ -5,6 +5,10 @@ case:
 >>> MyList([1,2,4,3]).print_sorted()
 [1, 2, 3, 4]
 
+case: (empty list):
+>>> print(MyList([]))
+[]
+
 case: empty list
 >>> MyList([]).print_sorted()
 []
