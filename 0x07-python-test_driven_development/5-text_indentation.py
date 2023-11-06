@@ -28,10 +28,6 @@ def text_indentation(text):
                 print(char)
                 if i < len(text) - 1:
                     print()
-            else:
-                print(char)
-                if i < len(text) - 1:
-                    print()
         else:
             current += char
     if current and text[-1] not in delimiter_set:
