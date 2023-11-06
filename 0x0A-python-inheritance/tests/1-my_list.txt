@@ -1,0 +1,10 @@
+import the module:
+>>> MyList = __import__('1-my_list').MyList
+
+case: normal case
+>>> print(MyList([1,2,3,4]))
+[1, 2, 3, 4]
+
+case: empty list
+>>> print(MyList([]))
+[]
