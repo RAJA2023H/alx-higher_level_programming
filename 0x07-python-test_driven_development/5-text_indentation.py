@@ -20,14 +20,15 @@ def text_indentation(text):
 
     delimiter_set = {".", "?", ":"}
     current = ""
-    for char in text:
+    for i, char in enumerate(text):
         if char in delimiter_set:
             if current:
-                print(current.strip(),end="")
+                print(current.strip(), end="")
                 current = ""
                 print(char)
-                print()
+                if i < len(text) - 1:
+                    print()
         else:
             current += char
-    if current:
+    if current and text[-1] not in delimiter_set:
         print(current.strip())
