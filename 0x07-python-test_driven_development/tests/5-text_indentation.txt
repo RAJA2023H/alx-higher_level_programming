@@ -2,13 +2,13 @@ importing the module:
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 case: normal
->>> text = "this is dot a test. this is question mark test? this is a colon test; "
+>>> text = "this is dot a test. this is question mark test? this is a colon test"
 >>> text_indentation(text)
 this is dot a test.
 <BLANKLINE>
 this is question mark test?
 <BLANKLINE>
-this is a colon test;
+this is a colon test
 
 case: no arg
 >>> text_indentation()
