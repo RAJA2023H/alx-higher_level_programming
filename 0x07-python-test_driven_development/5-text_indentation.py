@@ -30,4 +30,3 @@ def text_indentation(text):
             current += char
     if current:
         print(current.strip())
-        print()
