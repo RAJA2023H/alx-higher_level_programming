@@ -1,7 +1,6 @@
 importing the module:
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-
 case: normal
 >>> text = "this is dot a test. this is question mark test? this is a colon test; "
 >>> text_indentation(text)
