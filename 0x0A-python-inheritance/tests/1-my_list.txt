@@ -34,3 +34,7 @@ MyList([0, -1, -4, 9]).print_sorted()
 case:
 >>> MyList(['apple', 'banana!', 'Cherry&', 'date$']).print_sorted()
 ['Cherry&', 'apple', 'banana!', 'date$']
+
+case:
+>>> MyList([1, 3.0]).print_sorted()
+[1, 3.0]
