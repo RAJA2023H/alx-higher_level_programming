@@ -20,3 +20,11 @@ case: if not string
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
+
+case: no delimiter
+>>> text_indentation("no delimiter test")
+no delimiter test
+
+case: empty string
+>>> text_indentation("")
+
