@@ -11,7 +11,7 @@ stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
 cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
 beatiorem! Iam ruinas videres""")
 print("---------")
-text_indentation("Holberton School")
+text_indentation("Holberton.School")
 print("---------")
 text_indentation("")
 print("---------")

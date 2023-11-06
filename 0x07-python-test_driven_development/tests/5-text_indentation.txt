@@ -5,7 +5,9 @@ case: normal
 >>> text = "this is dot a test. this is question mark test? this is a colon test; "
 >>> text_indentation(text)
 this is dot a test.
+
 this is question mark test?
+
 this is a colon test;
 
 case: no arg
@@ -27,3 +29,8 @@ no delimiter test
 case: empty string
 >>> text_indentation("")
 
+case: “Holberton.School”
+>>> text_indentation("Holberton.School")
+Holberton.
+
+School
