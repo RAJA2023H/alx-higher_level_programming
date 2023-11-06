@@ -17,15 +17,16 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+
     delimiter_set = {".", "?", ":"}
     current = ""
     for char in text:
         if char in delimiter_set:
             if current:
-                print(current.strip(), end="")
+                print(current.strip(),end="")
                 current = ""
-            print(char)
-            print()
+                print(char)
+                print()
         else:
             current += char
     if current:
