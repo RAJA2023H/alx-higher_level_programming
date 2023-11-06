@@ -23,12 +23,9 @@ def text_indentation(text):
     for i, char in enumerate(text):
         if char in delimiter_set:
             if current:
-                print(current.strip(), end="")
+                print(current.strip() + char, end="\n\n")
                 current = ""
-                print(char)
-                if i < len(text) - 1:
-                    print()
         else:
             current += char
-    if current and text[-1] not in delimiter_set:
-        print(current.strip())
+    if current:
+        print(current.strip(), end="")
