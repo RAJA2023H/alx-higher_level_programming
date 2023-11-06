@@ -30,3 +30,7 @@ NameError: name 'hello' is not defined
 case:
 MyList([0, -1, -4, 9]).print_sorted()
 [-4, -1, 0, 9]
+
+case:
+>>> MyList(['apple', 'banana!', 'Cherry&', 'date$']).print_sorted()
+['Cherry&', 'apple', 'banana!', 'date$']
