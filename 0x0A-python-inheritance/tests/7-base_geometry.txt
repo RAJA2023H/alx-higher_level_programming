@@ -1,0 +1,33 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+case: area() is not implemented
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+case: integer_validator without arguments
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+case: value is tuple
+>>> bg.integer_validator("score", (30,))
+Traceback (most recent call last):
+...
+TypeError: score must be an integer
+
+case: value is list
+>>> bg.integer_validator("score", [3])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+case: value is None
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
