@@ -94,3 +94,11 @@ TypeError: name must be an integer
 case: 
 >>> obj.integer_validator({}, 1)
 
+case:
+>>> obj.integer_validator(1, True)
+
+case:
+>>> obj.integer_validator("str", True)
+
+case:
+>>> obj.integer_validator(1, 1)
