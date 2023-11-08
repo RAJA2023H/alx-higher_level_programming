@@ -1,3 +1,23 @@
+check module's doc:
+>>> doc = __import__("7-base_geometry").__doc__
+>>> print(len(doc) > 1)
+True
+
+check method's doc:
+>>> doc =	__import__("7-base_geometry").BaseGeometry.__doc__
+>>> print(len(doc) > 1)
+True
+
+check area's doc:
+>>> doc = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> print(len(doc) > 1)
+True
+
+check integer_validator's doc:
+>>> doc = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> print(len(doc) > 1)
+True
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
