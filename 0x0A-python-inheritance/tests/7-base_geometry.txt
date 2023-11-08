@@ -90,3 +90,6 @@ case: bool type
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+
+case: 
+>>> obj.integer_validator({}, 1)
