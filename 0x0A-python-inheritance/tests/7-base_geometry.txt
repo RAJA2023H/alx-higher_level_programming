@@ -3,6 +3,9 @@
 
 >>> bg = BaseGeometry()
 
+case: float
+>>> bg.integer_validator("age", 10.5)
+
 
 case: value is string
 >>> bg.integer_validator("name", "raja")
@@ -48,3 +51,15 @@ case: value is None
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
+
+case: too many args
+>>> bg.area(13)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+
+case: negative
+>>> bg.integer_validator("integer", -13)
+Traceback (most recent call last):
+...
+ValueError: integer must be greater than 0
