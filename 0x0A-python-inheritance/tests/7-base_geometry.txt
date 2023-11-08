@@ -1,11 +1,11 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
-
 >>> bg = BaseGeometry()
 
 case: float
 >>> bg.integer_validator("age", 10.5)
-
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 
 case: value is string
 >>> bg.integer_validator("name", "raja")
@@ -63,3 +63,9 @@ case: negative
 Traceback (most recent call last):
 ...
 ValueError: integer must be greater than 0
+
+case: bool type
+>>> bg.integer_validator("bool", False)
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
