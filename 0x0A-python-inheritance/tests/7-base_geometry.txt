@@ -18,6 +18,7 @@ check integer_validator's doc:
 >>> print(len(doc) > 1)
 True
 
+Importing the class:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
