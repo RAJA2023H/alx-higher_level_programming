@@ -12,4 +12,4 @@ of a class that inherited from a specified class
         specified class ; otherwise Falsei
         """
 
-        return isinstance(type(obj), a_class) and type(obj) != a_class
+        return isinstance(type(obj), a_class) and not type(obj) != a_class
