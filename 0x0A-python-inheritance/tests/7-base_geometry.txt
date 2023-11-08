@@ -26,7 +26,8 @@ Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 case: valid name(string) and valid value (integer)
->>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("int", 12)
+
 
 case: value is 0
 >>> bg.integer_validator("age", 0)
