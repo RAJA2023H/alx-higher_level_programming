@@ -13,4 +13,4 @@ class BaseGeometry:
         """
         area of the chape
         """
-        raise Exception("area() of the chape")
+        raise Exception("area() is not implemented")
