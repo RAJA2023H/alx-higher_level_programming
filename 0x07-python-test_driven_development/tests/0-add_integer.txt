@@ -1,0 +1,79 @@
+Import function:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Check function's docstring:
+	>>> doc = __import__("0-add_integer").add_integer.__doc__
+	>>> len(doc) > 1
+	True
+
+case: two integers
+	>>> add_integer(1, 2)
+	3
+
+case: subtracting two integers
+	>>> add_integer(100, -2)
+	98
+
+case: one argument
+	>>> add_integer(-85)
+	13
+
+case: adding float and int 
+	>>> add_integer(2.1, 98)
+	100
+
+case: subtracting float and int
+	>>> add_integer(100.3, -2)
+	98
+
+case: integer number and string
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	          ...
+	TypeError: b must be an integer
+
+case: No arg
+	>>> add_integer()
+	Traceback (most recent call last):
+	      ...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+case: (float(nan))
+	>>> add_integer(1, float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
+case: Adding a tuple
+	>>> add_integer((1, 1))
+	Traceback (most recent call last):
+	      ...
+	TypeError: a must be an integer
+
+case: letter and number
+	>>> add_integer('1', 1)
+	Traceback (most recent call last):
+    	      ...
+	TypeError: a must be an integer
+
+case: two letters
+	>>> add_integer('2', '1')
+	Traceback (most recent call last):
+              ...
+	TypeError: a must be an integer
+
+case: number and list
+	>>> add_integer(123, [])
+	Traceback (most recent call last):
+	      ...
+	TypeError: b must be an integer
+
+case: Adding two float numbers
+	>>> add_integer(2.9, 2.9)
+    	4
+
+Case Overflow:
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
