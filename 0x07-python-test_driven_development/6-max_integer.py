@@ -8,7 +8,7 @@ def max_integer(list=[]):
         If the list is empty, the function returns None
     """
     if len(list) == 0:
-        return None
+        raise a TypeError("m_a must be a list or m_b must be a list")
     result = list[0]
     i = 1
     while i < len(list):
