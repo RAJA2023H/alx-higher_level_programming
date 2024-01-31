@@ -1,11 +1,7 @@
-#!/usr/bin/python3
-"""
-empty class Rectangle that defines a rectangle
-"""
-
-
 class Rectangle:
+"""This is a docstring for Rectangle.
+
+    It can contain information about the class,
+    its purpose, and usage.
     """
-    defines a rectangle
-    """
-    pass
+	pass
