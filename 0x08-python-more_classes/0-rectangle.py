@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+"""
+Empty class Rectangle
+"""
 class Rectangle:
-"""This is a docstring for Rectangle.
-
-    It can contain information about the class,
-    its purpose, and usage.
-    """
+	"""
+	This is a docstring for Empty class Rectangle.
+	"""
 	pass
