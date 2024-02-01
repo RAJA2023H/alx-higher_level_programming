@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is a docstring for class Rectangle
+This is a docstring for Rectangle
 """
 
 class Rectangle:
@@ -8,8 +8,8 @@ class Rectangle:
         class that defines a rectangle 
         """
         def __init__(self, width=0, height=0):
-                self.width = a
-                self.height = b
+                self.width = width
+                self.height = height
 
         @property
         def width(self):
