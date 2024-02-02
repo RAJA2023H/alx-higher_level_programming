@@ -40,8 +40,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
 
     def area(self):
-        if self.__width == 0 and self.__height == 0:
-            return 0
         return self.__width * self.__height
     def perimeter(self):
+	if self.__width == 0 and self.__height == 0:
+            return 0
         return (self.__width + self.__height) * 2
