@@ -47,8 +47,10 @@ class Rectangle:
             return 0
         return (self.__width + self.__height) * 2
 
-    def rect(self):
-        for x in range (self.__height):
-            for y in range (self.__width):
-                print("#", end="")
-            print()
+    def __str__(self):
+        result = ""
+        for x in range(self.__height):
+            for y in range(self.__width):
+                result += "#"
+            result += "\n"
+        return result
