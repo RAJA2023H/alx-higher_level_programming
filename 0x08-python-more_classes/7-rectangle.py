@@ -55,7 +55,7 @@ class Rectangle:
         if self.__height != 0 and self.__width != 0:
             for x in range(self.__height):
                 for y in range(self.__width):
-                    result += self.print_symbol
+                    result += str(self.print_symbol)
                 if x == self.__height-1:
                     break
                 result += "\n"
