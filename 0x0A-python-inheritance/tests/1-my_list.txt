@@ -1,0 +1,23 @@
+MyList class tests
+
+check module's doc:
+	>>> doc = __import__('1-my_list').__doc__
+	>>> print(len(doc) >1)
+	True
+
+check method's doc:
+	>>> doc = __import__('1-my_list'),MyList.__doc__
+	>>> print(len(doc) > 1)
+	True
+
+	>>> MyList = __import__('1-my_list').Mylist
+
+case 1 (empty list):
+	>>> print(MyList([]))
+	[]
+case 2 ([1, 2, 3, 4])
+	>>> print(MyList(1,2,3,4))
+	[1, 2, 3, 4]
+case 3 ([3,4,1,2])
+	>>>MyList([1,2,3,4]).print_sorted()
+	[1, 2, 3, 4]
