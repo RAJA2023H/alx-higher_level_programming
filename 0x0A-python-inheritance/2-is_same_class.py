@@ -9,10 +9,10 @@ def is_same_class(obj, a_class):
     Returns: True or False
     Args:
         obj: object
-        a_class: class 
+        a_class: class
     """
 
-    if type(obj) is  a_class:
+    if type(obj) is a_class:
         return (True)
     else:
         return(False)
