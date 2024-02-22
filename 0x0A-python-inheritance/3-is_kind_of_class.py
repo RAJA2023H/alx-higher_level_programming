@@ -8,7 +8,7 @@ or if the object is an instance of a class that inherited from.
 def is_kind_of_class(obj, a_class):
     """
     Returns True or False
-    Args: 
+    Args:
         obj: object
         a_class: class
     """
