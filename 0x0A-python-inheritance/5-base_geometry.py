@@ -6,6 +6,6 @@ empty class
 
 class BaseGeometry:
     """
-    emty class
+    empty class
     """
     pass
