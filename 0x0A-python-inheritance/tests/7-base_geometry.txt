@@ -1,0 +1,25 @@
+check test
+__________________________
+Checking the presence of documentation helps
+ensure that code is well-documented and more user-friendly:
+	>>> moduledoc = __import__('7-base_geometry').__doc__
+	>>> print(len(moduledoc)>1)
+	True
+
+check whether the MyList class within the module
+'1-my_list' has documentation (a docstring):
+	>>> classdoc = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> print(len(classdoc)>1)
+	True
+
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+
+normal case:
+	>>> bg.integer_validator("space", 89)
+
+not int:
+	>>> bg.integer_validator("age", 0)
+	[ValueError] age must be greater than 0
+	
