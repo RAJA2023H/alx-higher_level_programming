@@ -17,9 +17,9 @@ check whether the MyList class within the module
 	>>> bg = BaseGeometry()
 
 normal case:
-	>>> bg.integer_validator("space", 89)
+	>>> bg.integer_validator("space",89)
 
 not int:
-	>>> bg.integer_validator("age", 0)
+	>>> bg.integer_validator("age",0)
 	[ValueError] age must be greater than 0
 	
