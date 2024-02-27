@@ -73,3 +73,15 @@ check test
    Traceback (most recent call last):
    ...
    TypeError: name must be an integer
+
+# Test present: integer_validator("age", {3, 4})
+   >>> bg.integer_validator("age", {3, 4})
+   Traceback (most recent call last):
+   ...
+   TypeError: age must be an integer
+
+# Test present: integer_validator("age", None)
+   >>> bg.integer_validator("age", None)
+   Traceback (most recent call last):
+   ...
+   TypeError: age must be an integer
