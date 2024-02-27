@@ -69,3 +69,10 @@ check test
 
 # test present: integer_validator("age", True)
    >>> bg.integer_validator("age", True)
+
+#24 check integer_validator where value is Boolean
+   >>> bg = BaseGeometry()
+   >>> bg.integer_validator("name", True)
+   Traceback (most recent call last):
+   ...
+   TypeError: name must be an integer
