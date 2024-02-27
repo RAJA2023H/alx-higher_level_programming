@@ -55,11 +55,11 @@ check test
    ...
    Exception: area() is not implemented
 
-# Test present: integer_validator(“age”, (4,))
-   >>> bg.integer_validator(“age”, (4,))
+# Test present: integer_validator("age", (4,))
+   >>> bg.integer_validator("age", (4,))
    Traceback (most recent call last):
    ...
-   SyntaxError: invalid character in identifier
+   TypeError: age must be an integer
 
 # test present: integer_validator("age", [3])
    >>> bg.integer_validator("age", [3])
@@ -67,8 +67,6 @@ check test
    ...
    TypeError: age must be an integer
 
-# Test present: integer_validator(“age”, (4,))
-   >>> bg.integer_validator(“age”, (4,))
-   Traceback (most recent call last):
-   ...
-   SyntaxError: invalid character in identifier
+# test present: integer_validator("age", True)
+   >>> bg.integer_validator("age", True)
+
