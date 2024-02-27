@@ -54,3 +54,15 @@ check test
    Traceback (most recent call last):
    ...
    Exception: area() is not implemented
+
+# Test present: integer_validator(“age”, (4,))
+   >>> bg.integer_validator(“age”, (4,))
+   Traceback (most recent call last):
+   ...
+   SyntaxError: invalid character in identifier
+
+# test present: integer_validator("age", [3])
+   >>> bg.integer_validator("age", [3])
+   Traceback (most recent call last):
+   ...
+   TypeError: age must be an integer
