@@ -67,9 +67,6 @@ check test
    ...
    TypeError: age must be an integer
 
-# test present: integer_validator("age", True)
-   >>> bg.integer_validator("age", True)
-
 #24 check integer_validator where value is Boolean
    >>> bg = BaseGeometry()
    >>> bg.integer_validator("name", True)
