@@ -24,8 +24,13 @@ check test
    Traceback (most recent call last):
    ...
    ValueError: age must be greater than 0
+
 # empty args
    >>> bg.integer_validator()
    Traceback (most recent call last):
    ...   
-   TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value' 
+   TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test present: integer_validator(“age”, “4”)
+   >>> bg.integer_validator("age", "4")
+   TypeError: age must be an integer
