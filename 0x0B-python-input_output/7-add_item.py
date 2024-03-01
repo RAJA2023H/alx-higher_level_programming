@@ -13,5 +13,5 @@ try:
 except FileNotFoundError:
     argslist = []
 
-argslist.append(args)
+argslist.extend(args)
 save_to_json_file(argslist, filename)
