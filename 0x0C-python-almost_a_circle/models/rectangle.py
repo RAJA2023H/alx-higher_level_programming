@@ -2,9 +2,9 @@
 """
 Rectangle is a subclass that inherits from Base
 """
-
-
 from  models.base import Base
+
+
 class Rectangle(Base):
     """
     Because we want to protect attributes of our class. With a setter,
@@ -12,40 +12,44 @@ class Rectangle(Base):
     So after, in your class you can “trust” these attributes.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
-    def get_width(self):
+    def width(self):
+        """ width"""
         return self.__width
 
     @width.setter
-    def set_width(self, value):
+    def width(self, value):
         self.__width = value
     
     @property
-    def get_height(self):
+    def height(self):
+        """height"""
         return self.__height
 
-    @height.Setter
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         self.__height = value
 
     @property
-    def get_x(self):
+    def x(self):
+        """ x """
         return self.__x
 
-    @x.Setter
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         self.__height = value
 
     @property
-    def get_y(self):
+    def y(self):
+        """ y """
         return self.__y
 
-    @y.Setter
-    def set_y(self, value):
+    @y.setter
+    def y(self, value):
         self.__y = value
