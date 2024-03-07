@@ -12,6 +12,9 @@ class Rectangle(Base):
     So after, in your class you can “trust” these attributes.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        constructor
+        """
         super().__init__(id)
         self.width = width
         self.height = height
