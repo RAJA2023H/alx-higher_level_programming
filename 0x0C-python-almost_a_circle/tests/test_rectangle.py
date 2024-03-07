@@ -1,4 +1,5 @@
 # test the rectangle class that inherits from Base class
+""" doc """
 import unittest
 from models.rectangle import Rectangle
 from models.base import Base
@@ -8,6 +9,10 @@ class testrectangle(unittest.TestCase):
     """
     class that test rectangle
     """
+    def setUp(self):
+        """import modul, instantiaton class"""
+        Base._Base__nb-objects = 0
+        pass
 
     def test_InhertsBase(self):
         self.assertTrue(issubclass(Rectangle, Base))
