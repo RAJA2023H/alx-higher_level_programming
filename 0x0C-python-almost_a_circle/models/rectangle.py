@@ -49,7 +49,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.setter_validation("x", value, True)
+        self.setter_validation("x", value)
         self.__x = value
 
     @property
@@ -59,7 +59,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.setter_validation("y", value, True)
+        self.setter_validation("y", value)
         self.__y = value
 
     def setter_validation(self, name, value, equal0=True):
@@ -71,6 +71,6 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError("{} must be an integer". format(name))
         if equal0 and value < 0:
-            raise ValueError("{} must be > 0". format(name))
-        if not equal0 and value < 0:
             raise ValueError("{} must be >= 0". format(name))
+        if not equal0 and value <= 0:
+            raise ValueError("{} must be > 0". format(name))
