@@ -68,7 +68,7 @@ class Rectangle(Base):
         args:
             name, value, equal0
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("{} must be an integer". format(name))
         if equal0 and value < 0:
             raise ValueError("{} must be >= 0". format(name))
