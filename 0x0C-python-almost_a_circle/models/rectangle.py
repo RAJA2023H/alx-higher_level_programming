@@ -63,7 +63,11 @@ class Rectangle(Base):
         self.__y = value
 
     def setter_validation(self, name, value, equal0=True):
-        """ doc"""
+        """
+        validation of all setter methods and instantiation
+        args:
+            name, value, equal0
+        """
         if type(value) != int:
             raise TypeError("{} must be an integer". format(name))
         if equal0 and value < 0:
