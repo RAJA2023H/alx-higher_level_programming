@@ -2,14 +2,15 @@
 """
 Rectangle is a subclass that inherits from Base
 """
-from  models.base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
     """
     Because we want to protect attributes of our class. With a setter,
-    you are able to validate what a developer is trying to assign to a variable.
-    So after, in your class you can “trust” these attributes.
+    you are able to validate what a developer is trying to assign to
+    a variable. So after, in your class you can “trust” these
+    attributes.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -29,7 +30,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         self.__width = value
-    
+
     @property
     def height(self):
         """height"""
