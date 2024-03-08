@@ -39,7 +39,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.setter_validation("heigh", value, False)
+        self.setter_validation("height", value, False)
         self.__height = value
 
     @property
