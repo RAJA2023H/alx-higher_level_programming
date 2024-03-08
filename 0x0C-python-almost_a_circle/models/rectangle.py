@@ -92,4 +92,8 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """ str method """
+        Id = self.id
+        x = self.__x
+        y = self.__y
+        return f"[Rectangle] ({Id}) {x}/{y} - {self.__width}/{self.__height}"
