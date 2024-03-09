@@ -37,14 +37,14 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """ updates the Square methode update"""
         if args:
-            l = len(args)
-            if l > 0:
+            Len = len(args)
+            if Len > 0:
                 self.id = args[0]
-            if l > 1:
+            if Len > 1:
                 self.size = args[1]
-            if l > 2:
+            if Len > 2:
                 self.x = args[2]
-            if l > 3:
+            if Len > 3:
                 self.y = args[3]
         elif kwargs:
             if 'id' in kwargs:
