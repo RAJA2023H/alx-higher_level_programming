@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Write the class Square that inherits from Rectangle
 """
 from models.base import Base
 from models.rectangle import Rectangle
@@ -20,4 +21,4 @@ class Square(Rectangle):
         """
         returns string infor about the square
         """
-        return f"[Square] {self.id} {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
