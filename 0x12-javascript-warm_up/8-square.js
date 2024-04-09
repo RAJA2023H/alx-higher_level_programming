@@ -6,7 +6,7 @@ if (Number.isNaN(size)) {
   for (let i = 0; i < size; i++) {
     let array = [];
     for (let j = 0; j < size; j++) {
-      array += 'x';
+      array += 'X';
     }
     console.log(array);
   }
