@@ -6,6 +6,6 @@ if (argv.length < 3) {
 if (argv.length === 3) {
   console.log('Arguments found');
 } 
-if (argv.lenght > 3){
+if (argv.lenght > 3) {
   console.log('Arguments found');
 }
