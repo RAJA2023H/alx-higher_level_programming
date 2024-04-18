@@ -4,11 +4,10 @@ class Rectangle {
   height;
 
   constructor(w, h) {
+    if (w > 0 && h > 0) {
     this.width = w;
     this.height = h;
+    }
   }
-}
-if (Rectangle.width <= 0 || Rectangle.height <= 0) {
-  
 }
 module.exports = Rectangle;
