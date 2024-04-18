@@ -19,15 +19,15 @@ class Rectangle {
     }
   }
 
-  rotate() {
-  const temp = this.height;
-  this.height = this.width;
-  this.width = temp;
+  rotate () {
+    const temp = this.height;
+    this.height = this.width;
+    this.width = temp;
   }
 
-  double() {
-  this.height *= 2;
-  this.width *= 2;
+  double () {
+    this.height *= 2;
+    this.width *= 2;
   }
 }
 module.exports = Rectangle;
