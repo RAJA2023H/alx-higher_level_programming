@@ -3,10 +3,11 @@
 import urllib.request
 import sys
 
+
 if __name__ == "__main__":
     try:
         URL = sys.argv[1]
         with urllib.request.urlopen(URL) as res:
-            print (response.read().decode('utf-8'))
+            print (res.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
