@@ -4,10 +4,9 @@ import urllib.request
 import sys
 url = sys.argv[1]
 try:
-    with urllib.request.urlopen(url) as response:
-        if 'X-Request-Id' in response.headers:
-            print(response.headers['X-Request-Id'])
-        else:
-            print("X-Request-Id header not found in the response")
+    r = urllib.request.Request(url)
+    with urllib.request.urlopen(r) as response:
+        h = response.headers['X-Request-Id']
+        print(h)
 except Exception as e:
-     print("Error:", e)
+    print("Error:", e)
