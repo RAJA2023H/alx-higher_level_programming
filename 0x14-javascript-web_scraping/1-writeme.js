@@ -13,6 +13,5 @@ if (args.length < 2) {
 fs.writeFile(filepath, str, 'utf8', (err) => {
   if (err) {
     console.error('Error:', err);
-    return;
   }
 });
