@@ -3,14 +3,10 @@
 
 const request = require('request');
 const url = process.argv[2];
-if (process.argv.length < 3) {
-  console.error('Usage: node script.js <url>');
-  process.exit(1);
-}
 
 request(url, (error, response) => {
   if (error) {
-    console.error('Error:', error.message);
+    console.log(error);
   } else {
     console.log('Code:', response.statusCode);
   }
